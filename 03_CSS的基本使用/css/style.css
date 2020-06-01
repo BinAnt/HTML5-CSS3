@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+/*设置文件的编码*/
+@charset "utf-8";
+/*import导入*/
+@import url('./base.css');
+
+=======
+>>>>>>> 55d0817f9e5d31a462ed12e47bd8cc05b6082fa0
 h1{
     background-color: #ff0000;
 }
@@ -9,4 +17,8 @@ a {
 }
 div {
     color: #ff0000;
+<<<<<<< HEAD
+    font-family: '微软雅黑';
+=======
+>>>>>>> 55d0817f9e5d31a462ed12e47bd8cc05b6082fa0
 }

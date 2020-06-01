@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            background-color: green;
+            text-align: center;
+        }
+        .box2 {
+            background-color: blue;
+            text-align: center;
+        }
+        .box3 {
+            background-color: gray;
+            text-align: center;
+        }
+        .inner {
+            display: inline-block;
+        }
+        .box4 {
+            background-color: #ff8888;
+            width: 500px;
+            text-align: justify; /* 文字向两侧对齐，对最后一行无效 */
+            text-align-last: justify; /* 强制最后一行两端对齐 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">hello</div>
+    <div class="box2">
+        <img src="../img/370262860.gif" width="200" alt="">
+    </div>
+    <div class="box3">
+        <!--.inner 会继承 .box3的text-align:center -->
+        <div class="inner">这是内容</div>
+    </div>
+
+    <div class="box4">
+        这一次来到学校，官兵们向60名成绩优异的学生发放武警奖学金，并向学校捐赠了办公设备、学习用具等物品。
+
+2016年以来，武警阿坝支队坚持“资助一名学生，温暖一个家庭；援建一所学校，培育一代青年”的思路，在阿坝、若尔盖、红原三个县先后投入资金，援建了3所武警爱民学校，目前已经资助100多名学生完成学业。
+    </div>
+</body>
+</html>
