@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div元素后面紧挨着的span元素（且div、span元素必须是兄弟关系）*/
+        div+span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <span>这是内容1</span>
+    <div>
+        <span>这是内容2</span>
+    </div>
+    <span>这是内容3</span>
+    <span>这是内容4</span>
+    <div>
+        这是内容5
+    </div>
+    <span>这是内容6</span>
+</body>
+</html>

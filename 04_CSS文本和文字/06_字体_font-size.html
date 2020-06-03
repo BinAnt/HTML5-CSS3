@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            font-size: 20px;
+        }
+        .inner-span {
+            /*
+                font-size: 的值都是相对其父元素的值
+            */
+            /* font-size: larger; */
+            /* font-size: 200%; */
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="inner-span">我是span</span>
+        <p>这是一个段落元素，呵呵呵呵</p>
+    </div>
+</body>
+</html>

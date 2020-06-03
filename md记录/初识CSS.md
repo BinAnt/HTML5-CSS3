@@ -321,6 +321,200 @@
 > 定义行内内容（例如文字）如何相对它的块父元素对齐
 >
 > 并不能控制块元素自己的对齐，只控制它的行内内容的对齐。
-=======
+
+#### 6.7 font-size
+
+* 常用值和单位
+
+  * px ：12px 绝对值，12个像素大小
+
+  * em: 2em , 相对于**父元素**的文字的大小。
+
+    ~~~~html
+    .box {
+    	font-size: 20px;
+    }
     
->>>>>>> 55d0817f9e5d31a462ed12e47bd8cc05b6082fa0
+    .box .inner {
+    	font-size: .5em; // 当前元素的父元素的字体大小的一半  10px
+    	font-size: 2em; // 当前元素的父元素的字体大小的一倍  40px
+    }
+    ~~~~
+
+#### 6.8 font-family
+
+* ```css
+  font-family: "Gill Sans Extrabold", sans-serif;
+  ```
+
+#### 6.9 font-weight
+
+> 属性指定了字体的粗细程度。 一些字体只提供 `normal` 和 `bold` 两种值
+
+#### 6.10 font-style
+
+> 允许你选择 [`font-family`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-family) 字体下的 `italic` 或 `oblique` 样式
+
+#### 6.11 line-height
+
+**行高的严格定义是：两行文字基线（baseline）之间的间距**
+
+* 注意区分height和line-height的区别
+  * height：元素的整体高度
+  * line-height：元素中每一行文字所占据的高度
+    * 应用实例：假设div中只有一行文字，如何让这行文字在div内部垂直居中
+
+~~~~html
+<head>
+    <title>Document</title>
+    <style>
+        /**
+            行高 = 文字高度 + 间距
+            间距 = line-height - 文字高度
+
+            1、
+            间距 = 26.4px - 20 => 6.4px 再上下平分  => 文字距顶部就是3.2px
+            这个时候文本框的高度是200px，而文字距顶是3.2px 所以文字这个时候就是靠顶部的
+
+            2、
+            当line-height == 文本框height时，文字可以垂直居中
+            间距 = 200px - 20px = 180px / 2 = 90px
+            这个时候文字距顶90px + 文字的一半高度 20px/2 = 10px 刚好等于100px = 200px/2
+            文字就居中了
+        */
+        .box {
+            height: 200px;
+            background-color: green;
+            font-size: 20px;
+            /* line-height: 26.4px; */
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">hello world!</div>
+</body>
+~~~~
+
+#### 6.12 font
+
+> `font` 属性可以用来作为 [`font-style`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-style), [`font-variant`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant), [`font-weight`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-weight), [`font-size`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size), [`line-height`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-height) 和 [`font-family`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-family) 属性的简写，或将元素的字体设置为系统字体
+
+~~~~html
+<head>
+    <style>
+        div {
+            /* font-style: italic;
+            font-variant: small-caps;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 50px;
+            font-family: serif; */
+
+              		/* style variant weight size/line-height family*/
+            /* font: italic small-caps bold 30px/50px '宋体'; */
+
+            /* style variant weight 这三项可以位置可以互换，也可以省略*/
+            /* font: 30px/50px '宋体'; */
+
+            /*line-height也可以省略*/
+            font: 30px '宋体';
+
+            background-color: green;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        这是一个div
+    </div>
+</body>
+~~~~
+
+### 7、其他选择器
+
+#### 7.1 属性选择器
+
+~~~~html
+<head>
+    <style>
+        /*选中全部有title属性的元素*/
+        [title] {
+            color: red;
+        }
+        /*划掉title='p元素 one'的元素*/
+        [title="p元素 one"] {
+            text-decoration: line-through;
+        }
+        /*title中包含'one'*/
+        [title*="one"] {
+            font-size: 30px;
+        }
+        /*以one结尾的title*/
+        [title$="one"] {
+            font-weight: bold;
+        }
+        /*以one开头的title*/
+        [title^="one"] {
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <p title="p元素 one">这是p元素</p>
+    <span title="span元素">这是span</span>
+    <div title="one div元素">这是div元素</div>
+    <p>这又是一个p元素</p>
+</body>
+~~~~
+
+#### 7.2 后代选择器
+
+* div 元素里面的span元素（包括直接、间接子元素）
+
+  ~~~~html
+  div span {
+  	color: red;
+  }
+  
+  <div>
+      <span>这是span</span>
+      <p>
+          <span>这又是一个span</span>
+      </p>
+  </div>
+  <span>这是第三个span</span>
+  ~~~~
+
+#### 7.3 子选择器（child combinators）
+
+> div 元素里面的直接span子元素（不包括间接子元素）
+
+~~~~html
+<span>文字内容1</span>
+<div>
+    <span>文字内容2</span>
+    <p>
+        <span>文字内容3</span>
+    </p>
+</div>
+<div>
+    <span>文字内容4</span>
+</div>
+~~~~
+
+~~~~css
+div>span {
+    color: red;
+}
+
+div > span {
+    color: red;
+}
+
+/*
+	文字内容2,文字内容4 才能选中
+*/
+~~~~
+

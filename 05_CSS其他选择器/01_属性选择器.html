@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*选中全部有title属性的元素*/
+        [title] {
+            color: red;
+        }
+        /*划掉title='p元素 one'的元素*/
+        [title="p元素 one"] {
+            text-decoration: line-through;
+        }
+        /*title中包含'one'*/
+        [title*="one"] {
+            font-size: 30px;
+        }
+        /*以one结尾的title*/
+        [title$="one"] {
+            font-weight: bold;
+        }
+        /*以one开头的title*/
+        [title^="one"] {
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <p title="p元素 one">这是p元素</p>
+    <span title="span元素">这是span</span>
+    <div title="one div元素">这是div元素</div>
+    <p>这又是一个p元素</p>
+</body>
+</html>
