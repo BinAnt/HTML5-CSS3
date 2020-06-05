@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* n: 0,1,2,3,4,5... 自然数*/
+        :nth-child(n+1) {
+            color: red;
+        }
+
+        /* p元素的兄弟元素： 
+        2n: 0, 2,4,6,8...
+        */
+        p:nth-child(2n) {
+            color: red;
+        }
+        /* 2n可以用even 替换*/
+        /* p:nth-child(even) {
+            color: red;
+        } */
+
+        /* 2n+1: 1, 3, 5, 7...*/
+        p:nth-child(2n+1) {
+            color: red;
+        }
+
+        /* 2n+1： 替换 odd*/
+        p:nth-child(odd) {
+            color: red;
+        }
+
+        /* p:nth-child(3n) {
+            color: red;
+        } */
+
+        /*
+        3n+1: 1,4,7...
+        */
+        /* p:nth-child(3n + 1) {
+            color: red;
+        } */
+
+        /*-n+3: 选中前三个元素*/
+        p:nth-child(-n+3) {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>文字内容1</p>
+        <p>文字内容2</p>
+        <p>文字内容3</p>
+        <p>文字内容4</p>
+        <p>文字内容5</p>
+        <p>文字内容6</p>
+        <p>文字内容7</p>
+        <p>文字内容8</p>
+    </div>
+</body>
+</html>

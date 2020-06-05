@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 第三个子元素 */
+        /* :nth-child(3) {
+            color: red;
+        } */
+
+        p:nth-child(3) {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>文字内容1</p>
+        <p>文字内容2</p>
+        <p>文字内容3</p>
+        <p>文字内容4</p>
+        <p>文字内容5</p>
+        <p>文字内容6</p>
+        <p>文字内容7</p>
+        <p>文字内容8</p>
+    </div>
+
+    <div>
+        <span>这是span内容1</span>
+        <span>这是span内容2</span>
+        <span>这是span内容3</span>
+        <span>这是span内容4</span>
+        <span>这是span内容5</span>
+        <span>这是span内容6</span>
+        <span>这是span内容7</span>
+        <span>这是span内容8</span>
+        <span>这是span内容9</span>
+        <span>这是span内容10</span>
+    </div>
+
+    <!-- 这是整个页面的第三个元素，所以整个p都是红色，下面的span继承p的属性 -->
+    <p>
+        <span>这是第三部分内容1</span>
+        <span>这是第三部分内容2</span>
+        <span>这是第三部分内容3</span>
+        <span>这是第三部分内容4</span>
+        <span>这是第三部分内容5</span>
+        <span>这是第三部分内容6</span>
+        <span>这是第三部分内容7</span>
+        <span>这是第三部分内容8</span>
+    </p>
+</body>
+</html>

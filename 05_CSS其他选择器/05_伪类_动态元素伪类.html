@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 链接未访问状态 */
+        a:link {
+            color: red;
+        }
+        /* 表示用户已经访问过链接 */
+        a:visited {
+            color: salmon;
+        }
+        /* 鼠标划过的时候, :hover规则需要放在:link和:visited规则之后*/
+        a:hover {
+            color: green;
+        }
+        /* 元素被激活，用户按下按键到松开按键之间的时间*/
+        a:active {
+            color: greenyellow;
+        }
+
+        /* hover/active 可以用在其他元素上 */
+        strong:hover {
+            background-color: purple;
+        }
+
+        strong:active {
+            font-size: 40px;
+        }
+
+        /* 3、:focus的使用 */
+        input:focus {
+            background-color: #ff0000;
+        }
+
+        a:focus {
+            font-size: 36px;
+        }
+
+        /* a {
+            outline: none;
+        } */
+    </style>
+</head>
+<body>
+    <!--tabindex 可以调整tab选中的顺序 -->
+    <a href="#" tabindex="-1">百度一下</a>
+
+    <strong>这是strong</strong>
+    <br>
+    <input type="text">
+</body>
+</html>
