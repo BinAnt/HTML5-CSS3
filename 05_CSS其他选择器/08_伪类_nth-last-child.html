@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* nth-child 正着数，第三个p元素*/
+        /* p:nth-child(3) {
+            color: royalblue;
+        } */
+
+        /* nth-last-child() 倒着数第三个p元素 */
+        /* 1.跟数字 */
+         /* p:nth-last-child(3) {
+            color: red;
+        }  */
+
+        /* 2n+1: 1, 3,5,7... 倒着数*/
+        /* 2.跟n */
+        /* p:nth-last-child(2n+1) {
+            color: red;
+        } */
+
+        /* 最后两个元素 */
+        p:nth-last-child(-n + 2) {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>文字内容1</p>
+        <p>文字内容2</p>
+        <p>文字内容3</p>
+        <p>文字内容4</p>
+        <p>文字内容5</p>
+        <p>文字内容6</p>
+        <p>文字内容7</p>
+        <p>文字内容8</p>
+    </div>
+</body>
+</html>

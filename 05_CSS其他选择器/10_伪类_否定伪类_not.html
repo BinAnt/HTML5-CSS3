@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            只要不是div的元素都匹配
+            结果全部都变成红色
+            以为body元素变成红色，div元素会继承了body
+        */
+        /* :not(div) {
+            color: red;
+        } */
+
+        /* body 下面非div元素 */
+        body :not(div) {
+            color: red;
+        }
+
+        /* 非class=‘.text’ 的元素*/
+        body :not(.text) {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>这是div内容1</div>
+    <span class="text">这是内容2</span>
+    <p>这是内容3</p>
+</body>
+</html>

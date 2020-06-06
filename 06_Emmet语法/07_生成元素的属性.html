@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- div#main -->
+    <div id="main"></div>
+    <!-- div.box -->
+    <div class="box"></div>
+    <!-- img[title]-->
+    <img src="" alt="" title="">
+    <!-- img[title="img-title"]-->
+    <img src="" alt="" title="img-title">
+
+    <!--
+        div#main>p.p1+h2+span.span1^div#footer>div.box>ul>li*8
+    -->
+    <div id="main">
+        <p class="p1"><span class="span"></span></p>
+        <h2></h2>
+        <span class="span1"></span>
+    </div>
+    <div id="footer">
+        <div class="box">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 一次性添加多个属性：
+        div#header.box1.box2[title="haha"]
+    -->
+    <div id="header" class="box1 box2" title="haha"></div>
+</body>
+</html>

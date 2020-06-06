@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 匹配的是文字内容2 */
+        /*
+            这是一个交集选择器：
+            1、必须是p元素
+            2、是第三个子元素
+        */
+        /* p:nth-child(3) {
+            color: red;
+        } */
+
+        /* 匹配p元素的第三个 */
+        /* p:nth-of-type(3) {
+            color: red;
+        } */
+
+        /* 文字内容1,3,5,7 */
+        /* p:nth-of-type(2n+1) {
+            color: red;
+        } */
+
+        /* 匹配 文字内容 1,2 */
+        /* p:nth-of-type(-n + 2) {
+            color: red;
+        } */
+
+        p:nth-last-of-type(3) {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>我是div元素</div>
+        <p>文字内容1</p>
+        <p>文字内容2</p>
+        <p>文字内容3</p>
+        <p>文字内容4</p>
+        <p>文字内容5</p>
+        <p>文字内容6</p>
+        <p>文字内容7</p>
+        <span>我是span元素</span>
+        <p>文字内容8</p>
+    </div>
+</body>
+</html>
