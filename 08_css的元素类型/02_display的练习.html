@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*样式重置*/
+        ul,li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+        /*
+            先全局
+        */
+        .email {
+            width: 100px;
+            border: 1px solid grey;
+            text-align: center;
+            line-height: 30px;
+        }
+        .email:hover ul{
+            display: block;
+        }
+        /**
+            再局部
+        */
+        .email .header {
+            background-color: #00aa00;
+            color: #ffffff;
+        }
+
+        /**
+            ul的局部
+        */
+        .email ul {
+            display: none;
+        }
+        .email ul li a {
+            display: block;
+        }
+        .email ul li a:hover {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="email">
+        <div class="header">邮箱</div>
+        <ul>
+            <li><a href="#">163邮箱</a></li>
+            <li><a href="#">Google</a></li>
+            <li><a href="#">139邮箱</a></li>
+        </ul>
+    </div>
+</body>
+</html>
