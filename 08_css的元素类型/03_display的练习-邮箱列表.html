@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mail {
+            color: #ffffff;
+            height: auto;
+            width: 100px;
+        }
+        .mail .header {
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: blue;
+            font-size: 14px;
+        }
+        .mail ul {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+        }
+        .ul-none {
+            display: none;
+        }
+        .ul-show {
+            display: inline;
+        }
+        .mail ul li {
+            width: 100%;
+            line-height: 30px;
+            text-align: center;
+            list-style-type: none;
+            margin-bottom: 1px;
+            background-color: grey;
+        }
+        .bg-color {
+            background-color: greenyellow !important; 
+        }
+    </style>
+</head>
+<body>
+    <div class="mail">
+        <div class="header" id="title">邮箱</div>
+        <ul class="ul-none" id="ul-box">
+            <li>163邮箱</li>
+            <li>Google邮箱</li>
+            <li>qq邮箱</li>
+        </ul>
+    </div>
+    <script>
+        const headNode = document.getElementById("title");
+        //划到邮箱位置显示
+        headNode.onmousemove = function(e) {
+            document.getElementById('ul-box').setAttribute("class", "ul-show")
+        }
+        
+        const liNode = document.getElementsByTagName('li')
+
+       for(let i=0; i<liNode.length; i++) {
+           liNode[i].onclick = function(e) {
+            for(let j=0; j<liNode.length; j++) {
+                liNode[j].removeAttribute('class')
+            }
+            liNode[i].setAttribute("class", "bg-color")
+           }
+       }
+        
+        
+     
+    </script>
+</body>
+</html>
