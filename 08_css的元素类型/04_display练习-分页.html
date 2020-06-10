@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /**
+        样式重置
+        */
+        ul,ul li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #0000cc;
+            font-size: 14px;
+        }
+        /**
+        总体样式
+        */
+        .page {
+            text-align: center;
+        }
+        .page  a {
+            float: left;
+            height: 34px;
+            line-height: 34px;
+            padding: 0 15px;
+            border: 1px solid #e1e2e3;
+            margin: 0 5px;
+        }
+        .page .pre, .page .next {
+            height: 34px;
+            padding: 0 18px;
+        }
+        /*
+        局部样式
+        */
+        .page a {
+            display: inline-block;
+        }
+        .page .active {
+            border: 0;
+            color: #000000;
+            cursor:initial;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <a href="#" class="pre">&lt;上一页</a>
+        <a class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a href="#">10</a>
+        <a href="#">11</a>
+        <a href="#" class="next">下一页&gt;</a>
+    </div>
+
+    <script>
+        // 添加页码的点击事件
+        let currentPage = 1;
+
+        function resetNode() {
+            for(let brother of document.getElementsByTagName('a')){
+                brother.removeAttribute('class')
+                brother.setAttribute('href', '#')
+            }
+        }
+        
+        function updateNode(currentPage) {
+            for(let element of document.getElementsByTagName('a')){
+                if(parseInt(element.innerText) === currentPage) {
+                    element.className = 'active'
+                    element.removeAttribute('href')
+                }
+            }
+        }
+
+        function initPage() {
+            const Nodes = document.getElementsByTagName('a')
+            for(let node of Nodes) {
+                let className = node.className;
+                
+                node.onclick = function(e) {
+                    //点击的当前页不往下执行
+                    if(node.getAttribute('href') == null) return;
+                    //重置兄弟元素样式
+                    resetNode();
+
+                    if(className == 'pre') { //上一页
+                        currentPage = currentPage!=1 ? --currentPage : currentPage;
+                    } else if(className == 'next') { //下一页
+                        currentPage = currentPage<(Nodes.length-2) ? ++currentPage : currentPage;
+                    } else {//点击中间页码
+                        currentPage = parseInt(node.innerText)
+                    }
+                    //更新选中样式
+                    updateNode(currentPage)
+                }
+            }
+        }
+        
+        //加载分页
+        initPage();
+    </script>
+</body>
+</html>
