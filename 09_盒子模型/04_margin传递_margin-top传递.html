@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+            padding-top: 1px;
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+
+            /* 左右margin不会传递 */
+            /* margin-left: 20px; */
+
+            /* 整个box1向下移动了20px */
+            /* 触发条件就是：内部元素的上边线和外框的上边线重合 */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box1">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>
