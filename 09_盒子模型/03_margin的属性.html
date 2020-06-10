@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #ff00ff;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: #00ff00;
+        }
+
+        /* 同时设置了上下的margin 会重叠，用最大值*/
+        /* .box1 {
+            margin-bottom: 30px;
+        }
+        .box2 {
+            margin-top: 20px;
+        } */
+
+        /* 左右同时设置margin会叠加 */
+        .box1 {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .box2 {
+            display: inline-block;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

@@ -507,3 +507,54 @@ div > span {
 */
 ~~~~
 
+### 8、css属性
+
+#### 8.1 visibility
+
+* visibility,能控制元素的可见性，有2个常用值
+  * visible: 显示元素
+  * hidden: 隐藏元素
+* visibility:hidden 和 display:none的区别
+  * visibility:hidden 虽然元素看不见，但元素的框依旧还留着，还会占着原来的位置
+  * display:none 不仅元素看不见，而且元素的框也会被移除，不会占着任何位置
+
+#### 8.2 overflow
+
+~~~~html
+<head>
+    <style>
+        .box {
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+
+            /* 溢出的内容照样可见 */
+            /* overflow: visible; */
+
+            /* 溢出的部分直接裁剪 */
+            /* overflow: hidden; */
+
+            /* 溢出的内容被裁剪，但可以滚动机制查看 */
+            /* overflow: scroll; */
+
+            /* 自动根据内容是否溢出来决定是否提供滚动机制 */
+            /* overflow: auto; */
+
+            /* 还有overflow-x,overflow-y 两个属性可以分别设置水平垂直方向
+            建议还是直接使用overflow，因为overflow-x、overflow-y还没有成为标准，浏览器可能不支持 */
+            overflow: hidden;
+            /* overflow-x: scroll; */
+            overflow-y: scroll;
+        }
+        .box img {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../img/370262860.gif" alt="">
+    </div>
+</body>
+~~~~
+
