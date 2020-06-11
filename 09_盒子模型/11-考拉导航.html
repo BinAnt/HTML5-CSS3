@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav-bar {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            background-color: #000000;
+            height: 30px;
+            line-height: 30px;
+        }
+        .nav-bar a {
+            color: #999999;
+            text-decoration: none;
+
+            margin-right: 20px;
+        }
+        .nav-bar a:hover {
+            color: #ffffff;
+        }
+        .profile span {
+            width: 0;
+            height: 0;
+
+            border-top: 6px solid #999999;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav" class="nav-bar">
+        <a href="#">每日签到</a>
+        <a href="#">我的订单</a>
+        <a href="#" class="profile">
+            个人中心
+            <span></span>
+        </a>
+        <a href="#">客户服务</a>
+        <a href="#">充值中心</a>
+        <a href="#">消费者权益</a>
+    </div>
+</body>
+</html>

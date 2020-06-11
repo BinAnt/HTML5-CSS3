@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        span {
+            background-color: tomato;
+
+            /* 1. padding的左右值都可以起作用，效果预期 */
+            /* padding-right: 20px;
+            padding-left: 20px; */
+
+            /* 2. padding的上下：上下会多出区域，但这个区域不占据空间 */
+            /* padding-top: 20px;
+            padding-bottom: 20px; */
+
+            /* 3. border 的左右起作用*/
+            /* border-right: 20px solid green;
+            border-left: 10px solid blue; */
+
+            /* 4. border的上下 会多出来区域，但是不占据空间 */
+            border-right: 20px solid #000;
+            border-bottom: 20px solid blue;
+
+            display: inline-block;
+        }
+
+        .div1,.div2 {
+            background-color: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">这是div元素</div>
+    <span>这是内容</span>
+    <span>这是内容2</span>
+    <div class="div2">这是div元素</div>
+</body>
+</html>
