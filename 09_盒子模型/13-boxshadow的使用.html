@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #ff0000;
+            margin: 0 auto;
+
+            /* 水平方向上 向右方向延伸 10px */
+            /* box-shadow: 10px 0 0 0; */
+            /* 水平方向上 向左方向延伸 10px */
+            /* box-shadow: -10px 0 0 0; */
+
+            /* 垂直方向上 是正数的话，就是向下 10px */
+            /* box-shadow: -10px 10px 0 0; */
+
+            /* 垂直方向上 是负数的话，就是向上 10px */
+            /* box-shadow: -10px -10px 0 0; */
+
+            /* 第三个参数 模糊直径 */
+            /* box-shadow: -10px -10px 10px 0; */
+            /* box-shadow: -10px -10px 0px 10px; */
+
+            /* x偏移量 y偏移量 阴影模糊半径 阴影扩散半径 阴影颜色*/
+            box-shadow: -10px -10px 5px 10px rgba(0, 0, 0, .3);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
