@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .box {
+            /* width: 1000px;
+            height: 300px; */
+            background-color: blueviolet;
+
+            overflow: hidden;
+        }
+        .box img {
+            position: relative;
+
+            /* 1、向左移动img宽度的一半； */
+            /* left 使用percent的时候是相对包含块的宽度 */
+            left: -62.5px;
+
+            /* transform 使用percent是相对自己的宽度 */
+            /* transform: translate(-50%); */
+
+            /* 2、向右移父元素（.box）宽度的一半 */
+            margin-left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../img/all_shop.png" alt="">
+    </div>
+</body>
+</html>
