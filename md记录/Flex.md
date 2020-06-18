@@ -9,3 +9,25 @@
 * 设置display属性为flex或inline-flex可以成为flex container
   * flex：flex container 以block-level形式存在
   * inline-flex：flex container 以inline-level形式存在
+
+
+
+## flex相关的属性
+
+#### 应用在flex container上的CSS属性
+
+* flex-flow
+* flex-direction
+* flex-wrap
+* justify-content
+* align-items
+* align-content
+
+#### 应用在flex items上的CSS属性
+
+* flex
+* flex-grow
+* flex-basis
+* flex-shrink
+* order
+* align-self
